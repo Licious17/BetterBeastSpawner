@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "BetterBeastSpawner",
+    "name": "BetterBeastSpawner",
+    "description": "",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
