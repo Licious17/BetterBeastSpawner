@@ -1,12 +1,10 @@
 package pt.licious.betterbeastspawner.spawning
 
 import com.pixelmonmod.pixelmon.Pixelmon
-import com.pixelmonmod.pixelmon.RandomHelper
 import com.pixelmonmod.pixelmon.api.spawning.SpawnAction
 import com.pixelmonmod.pixelmon.config.PixelmonConfig
 import com.pixelmonmod.pixelmon.spawning.LegendarySpawner
 import com.pixelmonmod.pixelmon.spawning.PixelmonSpawning
-import net.minecraft.entity.Entity
 import net.minecraft.entity.player.EntityPlayerMP
 import net.minecraftforge.fml.common.FMLCommonHandler
 import pt.licious.betterbeastspawner.api.BeastSpawnerEvents
@@ -14,6 +12,8 @@ import pt.licious.betterbeastspawner.api.BeastSpawnerEvents
 
 class BeastSpawner : LegendarySpawner("ultrabeast") {
 
+    // ToDo if you ever feel like a split config would go here
+    /*
     override fun getSpawns(pass: Int): MutableList<SpawnAction<out Entity>>? {
         if (pass == 0) {
             possibleSpawns = null
@@ -29,6 +29,7 @@ class BeastSpawner : LegendarySpawner("ultrabeast") {
             return possibleSpawns
         return null
     }
+     */
 
     override fun forcefullySpawn(onlyFocus: EntityPlayerMP?) {
         val clusters = arrayListOf<ArrayList<EntityPlayerMP>>()
@@ -82,31 +83,6 @@ class BeastSpawner : LegendarySpawner("ultrabeast") {
         private var horizontalSliceRadius: Int? = null
         private var verticalSliceRadius: Int? = null
         private var firesChooseEvent = true
-
-        fun <E : BeastSpawnerBuilder<T>?> setDistanceFromCentre(minimum: Int, maximum: Int): E {
-            var minimum = minimum
-            var maximum = maximum
-            if (minimum < 0) minimum = 0
-            minDistFromCentre = minimum
-            if (maximum < 0) maximum = 0
-            maxDistFromCentre = maximum
-            return getThis()
-        }
-
-        fun <E : BeastSpawnerBuilder<T>?> setSliceRadii(horizontal: Int, vertical: Int): E {
-            var horizontal = horizontal
-            var vertical = vertical
-            if (horizontal < 1) horizontal = 1
-            horizontalSliceRadius = horizontal
-            if (vertical < 1) vertical = 1
-            verticalSliceRadius = vertical
-            return getThis()
-        }
-
-        fun <E : BeastSpawnerBuilder<T>?> setFiresChooseEvent(firesChooseEvent: Boolean): E {
-            this.firesChooseEvent = firesChooseEvent
-            return getThis()
-        }
 
         override fun apply(spawner: T): T {
             super.apply(spawner)

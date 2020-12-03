@@ -13,13 +13,8 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 import pt.licious.betterbeastspawner.BetterBeastSpawner
 import java.io.File
 import com.pixelmonmod.pixelmon.spawning.PixelmonSpawning.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.time.delay
 import pt.licious.betterbeastspawner.spawning.BeastSpawner.BeastSpawnerBuilder
 import pt.licious.betterbeastspawner.ticking.ReloadWaiter
-import java.time.Duration
 
 object BeastController {
 
