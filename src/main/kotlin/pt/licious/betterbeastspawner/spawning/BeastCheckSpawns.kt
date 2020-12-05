@@ -70,7 +70,7 @@ class BeastCheckSpawns : ICheckSpawns {
             val messages = mutableListOf<ITextComponent>()
             if (event.showTime) {
                 val timeLeft = spawner.nextSpawnTime - System.currentTimeMillis()
-                val minutes = ceil(timeLeft / 1000F / 60F)
+                val minutes = ceil(timeLeft / 1000F / 60F).toInt()
                 messages.add(translate(TextFormatting.GOLD, "spawning.checkspawns.timeuntilnextattempt1")
                     .appendSibling(TextComponentString(" "))
                     .appendSibling(translate(TextFormatting.DARK_AQUA, "spawning.checkspawns.timeuntilnextattempt2", minutes)))

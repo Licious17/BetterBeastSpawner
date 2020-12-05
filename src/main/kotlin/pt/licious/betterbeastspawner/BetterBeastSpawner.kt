@@ -20,7 +20,7 @@ object BetterBeastSpawner {
 
     const val MOD_ID = "betterbeastspawner"
     const val MOD_NAME = "BetterBeastSpawner"
-    const val VERSION = "1.0"
+    const val VERSION = "1.1"
     val LOG: Logger = LogManager.getLogger(MOD_NAME)
 
     @Mod.EventHandler

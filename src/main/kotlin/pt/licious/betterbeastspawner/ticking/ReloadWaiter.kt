@@ -18,7 +18,7 @@ class ReloadWaiter {
     fun onTick(e: TickEvent.ServerTickEvent) {
         if (e.phase == TickEvent.Phase.START && ticks++ % 20 == 0 && PixelmonSpawning.coordinator.active) {
             MinecraftForge.EVENT_BUS.unregister(this)
-            BeastController.load()
+            BeastController.loadSpawner()
         }
     }
 
